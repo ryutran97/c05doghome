@@ -97,10 +97,8 @@ header nav a:hover{
     transition-delay: 0s;
 }
 header #main-header{
-    position: absolute;
     text-align: center;
     margin-top: 100px;
-    /* display: block; */
 }
 header #main-header p{
     width: 40%;
@@ -171,7 +169,7 @@ header #label-first .dot{
 }
 #what-we-do .item{
     width: 25%;
-    height: 400px;
+    height: auto;
 }
 #what-we-do img{
     border-radius: 50%;
@@ -283,6 +281,18 @@ header #label-first .dot{
     height: auto;
     border:1px white solid;
     box-shadow: 5px 10px 5px rgba(196, 196, 196, 0.479);
+}
+#services .item:hover{
+    background-color: orange; 
+}
+#services .item:hover p{
+    color: var(--h)
+}
+#services .item:hover h1{
+    color: var(--h);
+}
+#services .item:hover h2{
+    color: var(--pnormal);
 }
 /* Testimonials */
 #test{
@@ -440,13 +450,13 @@ footer{
 footer .container{
     display: flex;
     flex-wrap: wrap;
-    height: 400px;
+    height: auto;
     width: 100%;
 }
 
 footer .item{
     width: 25%;
-    height: 400px;
+    height: auto;
     padding: 10px 20px;
 }
 
@@ -482,6 +492,7 @@ footer img{
     position: fixed;
     right: 10px;
     bottom: 10px;
+    z-index: 1;
 }
 #totop img:hover{
     transform: rotate(360deg);
