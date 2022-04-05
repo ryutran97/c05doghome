@@ -3,7 +3,7 @@
     --grey: rgb(156, 155, 155);
     --h: rgb(0,0,0);
     --pnormal:rgb(255,255,255);
-    --titlesec: 40px;
+    --titlesec: 30px;
     --normalM: 80px 100px;
     --topbotM: 40px 0;
     --titleM: 50px auto;
@@ -21,10 +21,8 @@ body {
 /* Header */
 header {
     background-image: url("../img/1.jpg");
-    background-image: cover;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 800px;
+    background-size: cover;
+    height: auto;
     position: relative;
 }
 header #top{
@@ -60,7 +58,7 @@ header nav a:hover{
     border-radius: 5px;
 }
 #dropBtn{
-    font-size: 30px;
+    font-size: var(--titlesec);
     margin-left: 5px;
     background-color: transparent;
     color: var(--pnormal);
@@ -97,12 +95,15 @@ header nav a:hover{
     transition-delay: 0s;
 }
 header #main-header{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
     text-align: center;
     margin-top: 100px;
 }
 header #main-header p{
     width: 40%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     opacity: var(--pgrey);
 }
 header #main-header h2{
@@ -118,12 +119,13 @@ header #main-header button{
     border-radius: 10px;
 }
 header #label-first{
-    position: absolute;
+    position: relative;
     width: 20%;
     left: 50%;
     transform: translate(-50%,0);
     text-align: center;
     bottom: 10px;
+    margin-top: 100px;
 }
 header #label-first .dot{
     margin: auto auto;
@@ -134,6 +136,8 @@ header #label-first .dot{
     display:inline-block;
     margin-left: 5px;
 }
+/* header repo */
+
 /* Welcome */
 #welcome{
     text-align: center;
@@ -191,51 +195,30 @@ header #label-first .dot{
     background-image: url("../img/bg.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    height: 500px;
+    height: auto;
+    padding: 50px 20px;
 }
 #sta{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-    top:60px;
+    margin: auto;
+    text-align: center;
     font-size: var(--titlesec); 
 }
-#sta0{
-    position: relative;
+#statistics .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 80%;
+    margin: 0 auto;
+}
+#statistics .item{
     text-align: center;
-    left: 50%;
-    transform: translate(-50%,0);
+    width: 25%;
+}
+#statistics .item h1{
+    font-size: var(--titlesec);
+}
 
-}
-#sta1{
-    margin-top: 200px;
-    float: left;
-    width: 25%;
-}
-#sta2{
-    margin-top: 200px;
-    float: left;
-    width: 25%;
-}
-#sta3{
-    margin-top: 200px;
-    float: left;
-    width: 25%;
-}
-#sta4{
-    margin-top: 200px;
-    float: left;
-    width: 25%;
-}
-#sta0 h1{
-    font-size: 80px;
-    margin-bottom: 10px;
-}
-#sta0 p{
-    font-size: 20px;
-}
+
 /* Services */
 #services{
     background-color: rgb(235, 233, 233);
@@ -272,7 +255,6 @@ header #label-first .dot{
     grid-template-rows: 50% 50%;
     column-gap:10px ;
     row-gap: 20px;
-    
 }
 #services .item{
     background-color: white;
@@ -319,7 +301,7 @@ header #label-first .dot{
     padding: 10px;
 }
 #test .container{
-    width: 70%;
+    width: 80%;
     display: flex;
     margin: 0 auto;
     text-align: center;
@@ -480,14 +462,24 @@ footer #link{
     height: 50px;
 }
 footer img{
-    width: auto;
-    max-height: 100%;
+    width: 50px;
+    height: 50px;
     margin-left: 10px;
     border-radius: 10px;
 }
+footer #link{
+    width: 100%;
+    /* height: 50px; */
+}
+footer #email{
+    width: 60%;
+}
+footer #submit{
+    width: 35%;
+}
 
 #totop img{
-    width: 60px;
+    width: 3em;
     height: auto;
     position: fixed;
     right: 10px;
