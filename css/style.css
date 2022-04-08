@@ -3,7 +3,7 @@
     --grey: rgb(156, 155, 155);
     --h: rgb(0,0,0);
     --pnormal:rgb(255,255,255);
-    --titlesec: 30px;
+    --titlesec: 2em;
     --normalM: 80px 100px;
     --topbotM: 40px 0;
     --titleM: 50px auto;
@@ -22,6 +22,7 @@ body {
 header {
     background-image: url("../img/1.jpg");
     background-size: cover;
+    background-position: center;
     height: auto;
     position: relative;
 }
@@ -103,7 +104,7 @@ header #main-header{
 }
 header #main-header p{
     width: 40%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     opacity: var(--pgrey);
 }
 header #main-header h2{
@@ -195,6 +196,7 @@ header #label-first .dot{
     background-image: url("../img/bg.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: auto;
     padding: 50px 20px;
 }
@@ -281,6 +283,7 @@ header #label-first .dot{
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: auto;
     padding: 100px 20px;
 }
@@ -295,6 +298,7 @@ header #label-first .dot{
     text-transform: uppercase;
     position: absolute;
     left: 50%;
+    display: inline-block;
 }
 #test p{
     color: var(--pnormal);
@@ -312,6 +316,8 @@ header #label-first .dot{
 }
 #test img{
     border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 /* CSS Blog */
 #blog{
