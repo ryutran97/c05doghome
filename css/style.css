@@ -294,13 +294,7 @@ header #label-first .dot{
     font-size: 20px;
     color: orange;
     text-transform: uppercase;
-<<<<<<< HEAD
-    position: absolute;
-    left: 50%;
-    display: inline-block;
-=======
     display:inline-block;
->>>>>>> 8a03d61 (sua bai final)
 }
 #test p{
     color: var(--pnormal);
