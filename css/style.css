@@ -43,57 +43,44 @@ header #logo a:hover{
     background-color: none;
 }
 header nav{
-    margin: 20px 10px;
-    margin-right: 30px;
-    display: flex;
+    margin-right:50px ;
 }
-header nav a{
+header #menu a{
     text-decoration: none;
     color: var(--pnormal);
-    padding: 5px;
-    margin-left: 20px;
+    display: block;
+    padding: 15px;  
 }
-header nav a:hover{
+header #menu ul{
+    overflow: auto;
+}
+header #menu li{
+    list-style-type: none;
+}
+header #menu nav > ul > li{
+    float: left;
+}
+header #menu a:hover{
     background-color: white;
-    color: var(--h);
+    color: black;
     border-radius: 5px;
 }
-#dropBtn{
-    font-size: var(--titlesec);
-    margin-left: 5px;
-    background-color: transparent;
-    color: var(--pnormal);
-    border: none;
-    padding-top: 10px;
-}
-#dropBtn:hover{
-    background-color: white;
-    color: var(--h);
-    border-radius: 5px;
-}
-#dropdown{
-    position: relative;
-    display: inline-block;
-}
-#dropDowncont{
+header nav label {
     display: none;
+}
+header nav input{
+    display: none;
+}
+header .dropdown  ul {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    background-color: transparent;
+    text-align: left;
+    padding: 0;
+}
+header nav > ul > li:hover > ul {
+    display: block;
     z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
-}
-#dropDown:hover #dropDowncont{
-    display: block;
-}
-#dropDowncont a{
-    display: block;
-}
-#dropBtn:hover i{
-    transform: rotate(360deg);
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
 }
 header #main-header{
     position: relative;
@@ -106,10 +93,12 @@ header #main-header p{
     width: 40%;
     margin: 0 auto;
     opacity: var(--pgrey);
+    animation: mainheader 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 header #main-header h2{
     font-size: 50px;
     overflow: hidden;
+    animation: mainheader 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 header #main-header button{
     background-color: transparent;
@@ -137,12 +126,12 @@ header #label-first .dot{
     display:inline-block;
     margin-left: 5px;
 }
-/* header repo */
 
 /* Welcome */
 #welcome{
     text-align: center;
-    margin: var(--normalM)
+    margin: var(--normalM);
+    animation: welcome 4s both;
 }
 #welcome img{
     width: 100%;
@@ -151,7 +140,8 @@ header #label-first .dot{
 #welcome h1{
     color: var(--h);
     font-size: var(--titlesec);
-    margin: var(--titleM)
+    margin: var(--titleM);
+    animation: welcomeh1 2s both;
 }
 #welcome p{
     color: var(--grey);
@@ -179,6 +169,10 @@ header #label-first .dot{
 #what-we-do img{
     border-radius: 50%;
     margin-top: 20px;
+
+}
+#what-we-do .item:hover img{
+    animation: imghover 1s both;
 }
 #what-we-do h3{
     color: var(--h);
@@ -199,6 +193,7 @@ header #label-first .dot{
     background-position: center;
     height: auto;
     padding: 50px 20px;
+    animation: bgsta 40s both;
 }
 #sta{
     margin: auto;
@@ -267,16 +262,19 @@ header #label-first .dot{
     box-shadow: 5px 10px 5px rgba(196, 196, 196, 0.479);
 }
 #services .item:hover{
-    background-color: orange; 
+    background-color: orange;
 }
 #services .item:hover p{
-    color: var(--h)
+    color: var(--h);
+    animation: services 1s both;
 }
 #services .item:hover h1{
     color: var(--h);
+    animation: services 1s both;
 }
 #services .item:hover h2{
     color: var(--pnormal);
+    animation: services 1s both;
 }
 /* Testimonials */
 #test{
@@ -296,9 +294,13 @@ header #label-first .dot{
     font-size: 20px;
     color: orange;
     text-transform: uppercase;
+<<<<<<< HEAD
     position: absolute;
     left: 50%;
     display: inline-block;
+=======
+    display:inline-block;
+>>>>>>> 8a03d61 (sua bai final)
 }
 #test p{
     color: var(--pnormal);
@@ -314,6 +316,10 @@ header #label-first .dot{
     width: 40%;
     position: relative;
 }
+#test .item:hover{
+    animation: testti 2s both;
+}
+
 #test img{
     border-radius: 50%;
     display: block;
@@ -339,6 +345,9 @@ header #label-first .dot{
     border: 1px solid rgba(172, 172, 172, 0.404);
     height: auto;
     width: 33%;
+}
+#blog .item:hover{
+    animation: blog 1s both;
 }
 #blog img{
     width: 100%;
@@ -498,4 +507,131 @@ footer #submit{
     transition-duration: 0.5s;
     transition-timing-function: ease;
     transition-delay: 0s;
+}
+
+
+/* Animation */
+
+/* header */
+@keyframes mainheader{
+    0%{
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* welcome */
+@keyframes welcome{
+    0%{
+        opacity: 0;
+    }
+    /* 20%{
+        opacity: 0.2;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    80%{
+        opacity: 0.8;
+    } */
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes welcomeh1{
+    0%{
+        letter-spacing: 1em;
+    }
+    100%{
+        letter-spacing: 0em;
+    }
+}
+/* What-we-do */
+@keyframes imghover{
+    0%{
+        transform: rotateY(0);
+    }
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+/* Statistics */
+@keyframes bgsta {
+    0%{
+        background-position: 100% 0%;
+    }
+    25%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+/* Services */
+@keyframes services {
+    0%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* testimonial */
+@keyframes testti{
+    0%{
+        opacity: 1;
+        transform: translateY(0) scaleX(1) scaleY(1);
+        filter: blur(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-500px) scaleY(1.5) scaleX(0.5);
+        filter: blur(10px);
+    }
+}
+/* Blog */
+@keyframes blog {
+    0%{
+        transform: translateY(-17px);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(-15px);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-12px);
+    }
+    60%{
+        transform: translateY(0);
+    }
+    70%{
+        transform: translateY(-7px);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }

@@ -20,22 +20,27 @@
             <div id="logo">
                 <a href="index.html">Dog Home</a>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="#statistics">Statistics</a>
-                <a href="#services">Services</a>
-                <div id="dropDown">
-                    <button id="dropBtn">Drop down <i class="fa-solid fa-angle-down"></i></button>
-                    <div id="dropDowncont">
-                        <a href="#statistics">Statistics</a>
-                        <a href="#services">Services</a>
-                        <a href="#contact">ContactUs</a>
-                    </div>
-                </div>
-                <a href="#contact">Contact Us</a>
-            </nav>
+            <div id="menu">
+                <nav>
+                    <label for="input1">Menu</label>
+                    <input type="checkbox" id="input1" />
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#statistics">Statistics</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li class="dropdown">
+                            <a id="dropbtn" href="#">Dropdown </a>
+                            <ul>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#what-we-do">What we do</a></li>
+                                <li><a href="#test">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        
         <div id="main-header">
             <h2>HOW TO TRAIN YOUR DOG</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, culpa! Nesciunt neque non iusto, quibusdam sunt qui praesentium minus aspernatur error sapiente distinctio adipisci iure ipsa doloremque. Earum, officiis nostrum.</p>

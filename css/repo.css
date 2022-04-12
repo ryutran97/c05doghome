@@ -4,14 +4,6 @@
     header #top{
         font-size: 1em;
     }
-    #dropBtn{
-        font-size: 1em;
-        margin-left: 5px;
-        background-color: transparent;
-        color: var(--pnormal);
-        border: none;
-        padding-top: 10px;
-    }
     header #main-header h2{
         font-size: 3em;
         overflow: hidden;
@@ -21,6 +13,43 @@
         margin: 0 auto;
         opacity: var(--pgrey);
     }
+    header nav label{
+        display: block;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    header nav label:hover{
+        background-color: var(--pnormal);
+        color: black;
+        border-radius: 5px;
+    }
+    /* nav{
+        position: relative;
+    } */
+    nav > ul {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul {
+        display: block;
+    }
+    .dropdown > a {
+        display: block;
+        width: 100%;
+    }
+
+    nav > ul > li:hover > ul {
+        display: block;
+        z-index: 1;
+    }
+
 }
 @media only screen and (max-width: 576px)
 {
@@ -151,6 +180,12 @@
     }
 }
 /* contact repo */
+@media only screen and (max-width: 992px)
+{
+    #contact {
+        padding: 2em 3em;
+    }
+}
 @media only screen and (max-width: 576px)
 {
     #contact {
@@ -180,5 +215,16 @@
         height: auto;
         padding: 10px 20px;
     }
-    
  }
+ @media only screen and (max-width: 992px)
+{
+    footer {
+        padding: 2em 3em;
+    }
+    footer #email{
+        width: 100%;
+    }
+    footer #submit{
+        width: 100%;
+    }
+}
