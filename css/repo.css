@@ -35,6 +35,7 @@
         height: auto;
         background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
+        z-index: 5;
     }
 
     nav input[type="checkbox"]:checked ~ ul {
@@ -42,12 +43,20 @@
     }
     .dropdown > a {
         display: block;
+    }
+    header #menu nav > ul > li{
+        clear: left;
         width: 100%;
     }
 
     nav > ul > li:hover > ul {
         display: block;
-        z-index: 1;
+        width: 100%;
+    }
+    header .dropdown  ul {
+        position: relative;
+        text-align: center;
+        width: 100%;
     }
 
 }
